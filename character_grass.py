@@ -16,7 +16,6 @@ def render_frame(x, y):
     character.draw_new(x, y)
     delay(0.1)
 
-    
 def run_circle():
     print('Circle')
     cx,cy, r = 400, 300, 200
@@ -32,6 +31,11 @@ def run_rectangle():
     for x in range(50, 750+1, 5):
        render_frame(x, 90)
        #x, y 위치에 캐릭터 그리기
+
+    #top line
+       for x in range(750, 50 - 1, -5):
+           rander_frame(x, 550)
+       
         
 while True:
     run_circle()
