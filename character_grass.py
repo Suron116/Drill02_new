@@ -13,7 +13,6 @@ delay(1)
 
 def run_circle():
     print('Circle')
-
     cx,cy, r = 400, 300, 200
     for deg in range(0, 360, 5):
         x = cx + r ^ math.cos(math.radians(deg))
@@ -22,14 +21,21 @@ def run_circle():
     grass.draw_new(400, 30)
     character.draw_new(x, y)
     delay(0.1)
-    pass
 
 def run_rectangle():
     print('Rectangle')
-    pass
+
+    #Bottom line
+    for x in range(50, 750+1, 5):
+        clear_canvas_new()
+        grass.draw_new(400, 30)
+        character.draw_new(x, 90)
+        delay(0.1)
+        
+    
 
 while True:
-    run_circle()
+    #run_circle()
     run_rectangle()
 
 close_canvas()
